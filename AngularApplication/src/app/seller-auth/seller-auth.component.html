@@ -1,0 +1,33 @@
+<!-- <div>
+    <div class ="signup">
+        <h1>Seller Sign-up</h1>
+    </div>
+    <form action="">
+        <input type="text" placeholder="Enter Name">
+        <input type="text" placeholder="Enter Password">
+        <input type="text" placeholder="Enter Email">
+        <button>SignUp</button>
+    </form>
+</div> -->
+<div class="container">
+    <div class="signup-container">
+      <div class="signup">
+        <h1>Seller Sign-Up</h1>
+      </div>
+      <form #sellerSignUp ="ngForm" (ngSubmit)="signup(sellerSignUp.value)">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" ngModel name = "name" id="name" placeholder="Enter Name">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password"ngModel name = "password" placeholder="Enter Password">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" ngModel name = "email" placeholder="Enter Email">
+        </div>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+      </form>
+    </div>
+  </div>

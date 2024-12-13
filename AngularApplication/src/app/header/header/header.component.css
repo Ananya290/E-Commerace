@@ -1,0 +1,13 @@
+nav.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+.form-control {
+    max-width: 300px;
+}
+.nav-item a {
+    font-weight: 500;
+}
