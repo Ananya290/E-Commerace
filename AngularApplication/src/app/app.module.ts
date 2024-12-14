@@ -5,19 +5,23 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import { SellerHomeComponent } from './seller-home/seller-home.component'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    SellerAuthComponent
+    SellerAuthComponent,
+    SellerHomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()
