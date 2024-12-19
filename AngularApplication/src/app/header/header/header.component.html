@@ -1,38 +1,48 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <!-- Brand -->
       <a class="navbar-brand" href="#">
-        <h1>E-com</h1>
+        <h1>E-comm</h1>
       </a>
   
-      <!-- Toggle button for mobile -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
   
-      <!-- Collapsible content -->
-      <div class="collapse navbar-collapse" id="navbarContent">
-        <!-- Search bar -->
-        <form class="d-flex ms-auto me-3">
+      <div  class="collapse navbar-collapse" id="navbarContent">
+        <form *ngIf="menuType==='default'" class="d-flex ms-auto me-3">
           <input class="form-control me-2" type="search" placeholder="Search for products" aria-label="Search">
           <button class="btn btn-primary" type="submit">Search</button>
         </form>
-  
-        <!-- Navigation links -->
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" routerLink="">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/seller">Seller</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Cart(0)</a>
-          </li>
-        </ul>
+         <div [ngSwitch]="menuType">
+          <ul *ngSwitchCase="'default'" class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" routerLink="">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/seller">Seller</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cart(0)</a>
+            </li>
+          </ul>
+          <ul *ngSwitchCase="'seller'" id="navbarContent_seller" class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" routerLink="">Product List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/seller">Add Product</a>
+            </li>
+            <li class="nav-item">
+              <a (click)="logout()" class="nav-link" href="#">Logout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> {{this.sellerName | titlecase}}</a>
+            </li>
+          </ul>
+        </div>        
       </div>
     </div>
-  </nav>
+  </nav> 
