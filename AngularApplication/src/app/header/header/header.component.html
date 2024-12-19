@@ -8,12 +8,12 @@
         <span class="navbar-toggler-icon"></span>
       </button>
   
-      <div  class="collapse navbar-collapse" id="navbarContent">
+      <div  class="collapse navbar-collapse" id="navbarContent" style="margin-left : 65%">
         <form *ngIf="menuType==='default'" class="d-flex ms-auto me-3">
           <input class="form-control me-2" type="search" placeholder="Search for products" aria-label="Search">
           <button class="btn btn-primary" type="submit">Search</button>
         </form>
-         <div [ngSwitch]="menuType">
+         <div [ngSwitch]="menuType" >
           <ul *ngSwitchCase="'default'" class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" routerLink="">Home</a>
@@ -28,18 +28,18 @@
               <a class="nav-link" href="#">Cart(0)</a>
             </li>
           </ul>
-          <ul *ngSwitchCase="'seller'" id="navbarContent_seller" class="navbar-nav mb-2 mb-lg-0">
+          <ul *ngSwitchCase="'seller'" class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" routerLink="">Product List</a>
+              <a class="nav-link active" routerLink="app-seller-home">Product List</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="/seller">Add Product</a>
+              <a class="nav-link" routerLink="seller-addproduct">Add Product</a>
             </li>
             <li class="nav-item">
               <a (click)="logout()" class="nav-link" href="#">Logout</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"> {{this.sellerName | titlecase}}</a>
+              <a class="nav-link"> {{this.sellerName | titlecase}}</a>
             </li>
           </ul>
         </div>        

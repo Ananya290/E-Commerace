@@ -90,5 +90,43 @@
       "password": "test1",
       "email": "test1"
     }
+  ],
+  "products": [
+    {
+      "id": "ecb6",
+      "name": "Iphone14",
+      "price": "10000",
+      "category": "Mobile",
+      "color": "red",
+      "description": "inphone",
+      "url": "https://www.istockphoto.com/photos/apple-iphone-back-view"
+    },
+    {
+      "id": "0707",
+      "name": "Iphone14",
+      "price": "10700",
+      "category": "Mobile",
+      "color": "red",
+      "description": "inphone",
+      "url": "https://www.istockphoto.com/photos/apple-iphone-back-view"
+    },
+    {
+      "id": "f3ac",
+      "name": "Iphone24",
+      "price": "10700",
+      "category": "Mobile",
+      "color": "red",
+      "description": "inphone",
+      "url": "https://www.istockphoto.com/photos/apple-iphone-back-view"
+    },
+    {
+      "id": "75c9",
+      "name": "laptop",
+      "price": "10700",
+      "category": "laptop",
+      "color": "red",
+      "description": "laptop",
+      "url": "https://www.istockphoto.com/photos/apple-iphone-back-view"
+    }
   ]
 }

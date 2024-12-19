@@ -1,1 +1,35 @@
-<p>seller-home works!</p>
+<div class="container my-5">
+    <h1 class="text-center mb-4">Product List</h1>
+    <p class="alert alert-success text-center" *ngIf="productdeletemssg">
+      {{ productdeletemssg }}
+    </p>
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Color</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>URL</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of Lists">
+            <td>{{ item.name }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.color }}</td>
+            <td>{{ item.category }}</td>
+            <td>{{ item.description }}</td>
+            <td>
+              <a href="{{ item.url }}" target="_blank">{{ item.url }}</a>
+            </td>
+            <td><button (click)="deleteProductList(item.id)">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
